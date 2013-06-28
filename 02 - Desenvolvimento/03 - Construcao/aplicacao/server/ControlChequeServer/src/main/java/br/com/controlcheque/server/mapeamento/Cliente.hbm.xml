@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name= "br.com.controlcheque.server.model.Cliente" table="tb_cliente">
+    <id column="idCliente" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property column="codigoCliente" name="codigo"/>
+    <property column="nomeCliente" name="nome"/>
+    <property column="telefoneCliente" name="telefone"/>
+    <property column="ruaCliente" name="rua_Endereco"/>
+    <property column="bairroCliente" name="bairro_Endereco"/>
+    <property column="cidadeCliente" name="cidade_Endereco"/>
+    <property column="complementoCliente" name="complemento_Endereco"/>
+    <property column="numeroCliente" name="numero_Endereco"/>
+  </class>
+</hibernate-mapping>

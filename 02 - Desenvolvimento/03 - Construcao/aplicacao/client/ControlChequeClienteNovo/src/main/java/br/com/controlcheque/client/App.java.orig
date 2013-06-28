@@ -1,0 +1,75 @@
+package br.com.controlcheque.client;
+
+import br.com.controlcheque.client.telas.JFrameProgressBar;
+import br.com.controlcheque.client.telas.SplashAguarde;
+import br.com.controlcheque.client.telas.TelaPrincipalForm;
+import br.com.controlcheque.client.util.LogUtil;
+import javax.swing.JFrame;
+
+/**
+ *
+ */
+public class App {
+
+    public static TelaPrincipalForm telaPrincipal = null;
+    private static final int RUN_PORT = 8666;
+<<<<<<< local
+    public static JFrameProgressBar frame;
+=======
+    private static SplashAguarde telaAguarde;
+>>>>>>> other
+
+    public static void main(String[] args) {
+
+        exibeTela();
+
+        new Thread(new Runnable() {
+
+            public void run() {
+                carrega();
+            }
+
+            public void carrega() {
+                carregaAplicacao();
+            }
+        }).start();
+    }
+
+    private static void carregaAplicacao() {
+        try {
+            LogUtil.logInformacao("INICIALIZANDO PROGRAMA CONTROL CHEQUE");
+            java.net.ServerSocket ss = new java.net.ServerSocket(RUN_PORT);
+
+            if (telaPrincipal == null) {
+                telaPrincipal = new TelaPrincipalForm();
+            }
+
+            Thread.sleep(1000);
+
+            telaAguarde.dispose();
+            telaPrincipal.setVisible(true);
+        } catch (java.net.BindException ex) {
+            LogUtil.logDescricaoErro(App.class, ex);
+            System.exit(1);
+        } catch (java.io.IOException ex) {
+            LogUtil.logDescricaoErro(App.class, ex);
+            System.exit(1);
+        }catch(Exception ex)
+        {
+            
+        }
+    }
+
+<<<<<<< local
+    public static void exibeTela() {
+        frame = new JFrameProgressBar();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+=======
+    private static void exibeTela() {
+        telaAguarde = new SplashAguarde(10000);
+        telaAguarde.showSplash();
+>>>>>>> other
+    }
+}

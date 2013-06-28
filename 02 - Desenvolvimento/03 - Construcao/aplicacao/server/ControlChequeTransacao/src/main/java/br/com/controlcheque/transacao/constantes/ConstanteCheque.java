@@ -1,0 +1,31 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package br.com.controlcheque.transacao.constantes;
+
+/**
+ *
+ * @author Robson
+ */
+public class ConstanteCheque {
+    public static String NOME_EVENTO_SALVAR_CHEQUE = "SALVAR_CHEQUE";
+    public static String NOME_EVENTO_SALVAR_LISTA_CHEQUE = "SALVAR_LISTA_CHEQUE";
+    public static String NOME_EVENTO_BUSCAR_TODOS_CHEQUES = "REC_TODOS_CHEQUES";
+    public static String NOME_EVENTO_BUSCAR_CHEQUES_POR_SITUACAO = "REC_CHEQUES_POR_SITUACAO";
+    public static String NOME_EVENTO_DELETAR_CHEQUE = "DELETAR_CHEQUE";
+    public static String NOME_EVENTO_DELETAR_CHEQUE_LIXEIRA = "DELETAR_CHEQUE_LIXEIRA";
+    public static String NOME_EVENTO_GERAR_COD_CHEQUE = "GERAR_COD_CHEQUE";
+    public static String NOME_EVENTO_BUSCAR_CHEQUE_POR_ID="REC_CHEQUE_POR_ID";
+    public static String NOME_EVENTO_RECSOMATORIO_CHEQUES_PORINTERVALO_DATA="NOME_EVENTO_RECSOMATORIO_CHEQUES_PORINTERVALO_DATA";
+    public static String NOME_EVENTO_RECQUANTIDADE_CHEQUES_PORINTERVALO_DATA="NOME_EVENTO_RECQUANTIDADE_CHEQUES_PORINTERVALO_DATA";
+
+    //CODIGOS ERROS
+    public static String CODIGO_ERRO_BANCO_OBRIGATORIO = "TRANS_CHEQUE_001";
+    public static String CODIGO_ERRO_TITULAR_OBRIGATORIO = "TRANS_CHEQUE_002";
+    public static String CODIGO_ERRO_VALOR_OBRIGATORIO = "TRANS_CHEQUE_003";
+    public static String CODIGO_ERRO_DATA_BOMPARA_OBRIGATORIO = "TRANS_CHEQUE_004";
+    public static String CODIGO_ERRO_RECEBIDE_OBRIGATORIO = "TRANS_CHEQUE_005";
+    public static String CODIGO_ERRO_VALIDAR_INTERVALO_DATAS = "TRANS_CHEQUE_006";
+}
