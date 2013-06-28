@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+    <mapping>
+        <class-a>br.com.controlcheque.server.model.Banco</class-a>
+        <class-b>br.com.controlcheque.servico.beans.Banco</class-b>           
+    </mapping>
+    <mapping>
+        <class-a>br.com.controlcheque.server.model.Cheque</class-a>
+        <class-b>br.com.controlcheque.servico.beans.Cheque</class-b>            
+    </mapping>    
+    <mapping>
+        <class-a>br.com.controlcheque.server.model.Cliente</class-a>
+        <class-b>br.com.controlcheque.servico.beans.Cliente</class-b>            
+    </mapping>
+    
+    <mapping>
+        <class-a>br.com.controlcheque.server.model.Usuario</class-a>
+        <class-b>br.com.controlcheque.servico.beans.Usuario</class-b>            
+    </mapping>
+</mappings>

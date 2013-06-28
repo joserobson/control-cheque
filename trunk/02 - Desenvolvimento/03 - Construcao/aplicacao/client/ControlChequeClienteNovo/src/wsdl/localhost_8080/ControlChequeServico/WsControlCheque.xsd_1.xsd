@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2. --><xs:schema xmlns:tns="http://servico.controlcheque.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servico.controlcheque.com.br/">
+
+<xs:element name="Exception" type="tns:Exception" />
+
+<xs:element name="deletarBanco" type="tns:deletarBanco" />
+
+<xs:element name="deletarBancoResponse" type="tns:deletarBancoResponse" />
+
+<xs:element name="recTodosBanco" type="tns:recTodosBanco" />
+
+<xs:element name="recTodosBancoResponse" type="tns:recTodosBancoResponse" />
+
+<xs:element name="salvarBanco" type="tns:salvarBanco" />
+
+<xs:element name="salvarBancoResponse" type="tns:salvarBancoResponse" />
+
+<xs:element name="salvarListaBanco" type="tns:salvarListaBanco" />
+
+<xs:element name="salvarListaBancoResponse" type="tns:salvarListaBancoResponse" />
+
+<xs:complexType name="salvarBanco">
+<xs:sequence>
+<xs:element name="pBanco" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="banco">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="descricao" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recTodosBanco">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="recTodosBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarBanco">
+<xs:sequence>
+<xs:element name="banco" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListaBanco">
+<xs:sequence>
+<xs:element name="listaBancos" type="tns:banco" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListaBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

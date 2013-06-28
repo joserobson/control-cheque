@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2. --><xs:schema xmlns:tns="http://banco.ws.servico.controlcheque.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://banco.ws.servico.controlcheque.com.br/">
+
+<xs:element name="Exception" type="tns:Exception" />
+
+<xs:element name="deletar" type="tns:deletar" />
+
+<xs:element name="deletarResponse" type="tns:deletarResponse" />
+
+<xs:element name="getBanco" type="tns:getBanco" />
+
+<xs:element name="getBancoResponse" type="tns:getBancoResponse" />
+
+<xs:element name="recObjeto" type="tns:recObjeto" />
+
+<xs:element name="recObjetoResponse" type="tns:recObjetoResponse" />
+
+<xs:element name="recTodos" type="tns:recTodos" />
+
+<xs:element name="recTodosResponse" type="tns:recTodosResponse" />
+
+<xs:element name="salvar" type="tns:salvar" />
+
+<xs:element name="salvarListObjetos" type="tns:salvarListObjetos" />
+
+<xs:element name="salvarListObjetosResponse" type="tns:salvarListObjetosResponse" />
+
+<xs:element name="salvarResponse" type="tns:salvarResponse" />
+
+<xs:complexType name="recObjeto">
+<xs:sequence>
+<xs:element name="arg0" type="xs:anyType" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recObjetoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListObjetos">
+<xs:sequence>
+<xs:element name="arg0" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListObjetosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBanco">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="banco">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="descricao" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvar">
+<xs:sequence>
+<xs:element name="pBanco" type="xs:anyType" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletar">
+<xs:sequence>
+<xs:element name="arg0" type="xs:anyType" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recTodos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="recTodosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2. --><xs:schema xmlns:tns="http://service.controlcheque.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.controlcheque.com.br/">
+
+<xs:element name="Exception" type="tns:Exception" />
+
+<xs:element name="backupControlCheque" type="tns:backupControlCheque" />
+
+<xs:element name="backupControlChequeResponse" type="tns:backupControlChequeResponse" />
+
+<xs:element name="deletarBanco" type="tns:deletarBanco" />
+
+<xs:element name="deletarBancoResponse" type="tns:deletarBancoResponse" />
+
+<xs:element name="deletarCheque" type="tns:deletarCheque" />
+
+<xs:element name="deletarChequeLixeira" type="tns:deletarChequeLixeira" />
+
+<xs:element name="deletarChequeLixeiraResponse" type="tns:deletarChequeLixeiraResponse" />
+
+<xs:element name="deletarChequeResponse" type="tns:deletarChequeResponse" />
+
+<xs:element name="deletarCliente" type="tns:deletarCliente" />
+
+<xs:element name="deletarClienteResponse" type="tns:deletarClienteResponse" />
+
+<xs:element name="gerarCodigoCheque" type="tns:gerarCodigoCheque" />
+
+<xs:element name="gerarCodigoChequeResponse" type="tns:gerarCodigoChequeResponse" />
+
+<xs:element name="gerarCodigoCliente" type="tns:gerarCodigoCliente" />
+
+<xs:element name="gerarCodigoClienteResponse" type="tns:gerarCodigoClienteResponse" />
+
+<xs:element name="loginUsuario" type="tns:loginUsuario" />
+
+<xs:element name="loginUsuarioResponse" type="tns:loginUsuarioResponse" />
+
+<xs:element name="recChequePorId" type="tns:recChequePorId" />
+
+<xs:element name="recChequePorIdResponse" type="tns:recChequePorIdResponse" />
+
+<xs:element name="recChequesPorSituacao" type="tns:recChequesPorSituacao" />
+
+<xs:element name="recChequesPorSituacaoResponse" type="tns:recChequesPorSituacaoResponse" />
+
+<xs:element name="recTodosBancos" type="tns:recTodosBancos" />
+
+<xs:element name="recTodosBancosResponse" type="tns:recTodosBancosResponse" />
+
+<xs:element name="recTodosCheques" type="tns:recTodosCheques" />
+
+<xs:element name="recTodosChequesResponse" type="tns:recTodosChequesResponse" />
+
+<xs:element name="recTodosClientes" type="tns:recTodosClientes" />
+
+<xs:element name="recTodosClientesResponse" type="tns:recTodosClientesResponse" />
+
+<xs:element name="recValorChequePorIntervaloData" type="tns:recValorChequePorIntervaloData" />
+
+<xs:element name="recValorChequePorIntervaloDataResponse" type="tns:recValorChequePorIntervaloDataResponse" />
+
+<xs:element name="salvarBanco" type="tns:salvarBanco" />
+
+<xs:element name="salvarBancoResponse" type="tns:salvarBancoResponse" />
+
+<xs:element name="salvarCheque" type="tns:salvarCheque" />
+
+<xs:element name="salvarChequeResponse" type="tns:salvarChequeResponse" />
+
+<xs:element name="salvarCliente" type="tns:salvarCliente" />
+
+<xs:element name="salvarClienteResponse" type="tns:salvarClienteResponse" />
+
+<xs:element name="salvarListBancos" type="tns:salvarListBancos" />
+
+<xs:element name="salvarListBancosResponse" type="tns:salvarListBancosResponse" />
+
+<xs:element name="salvarListCheques" type="tns:salvarListCheques" />
+
+<xs:element name="salvarListChequesResponse" type="tns:salvarListChequesResponse" />
+
+<xs:element name="salvarListClientes" type="tns:salvarListClientes" />
+
+<xs:element name="salvarListClientesResponse" type="tns:salvarListClientesResponse" />
+
+<xs:element name="salvarUsuario" type="tns:salvarUsuario" />
+
+<xs:element name="salvarUsuarioResponse" type="tns:salvarUsuarioResponse" />
+
+<xs:complexType name="salvarBanco">
+<xs:sequence>
+<xs:element name="pBanco" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="banco">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="descricao" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recChequesPorSituacao">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" />
+<xs:element name="arg1" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recChequesPorSituacaoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cheque" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cheque">
+<xs:sequence>
+<xs:element name="agencia" type="xs:string" minOccurs="0" />
+<xs:element name="banco" type="tns:banco" minOccurs="0" />
+<xs:element name="codigoCheque" type="xs:string" minOccurs="0" />
+<xs:element name="conta" type="xs:string" minOccurs="0" />
+<xs:element name="cpfTitular" type="xs:string" minOccurs="0" />
+<xs:element name="dataBomPara" type="xs:dateTime" minOccurs="0" />
+<xs:element name="dataEmissao" type="xs:dateTime" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="numero" type="xs:string" minOccurs="0" />
+<xs:element name="observacao" type="xs:string" minOccurs="0" />
+<xs:element name="passeiPara" type="xs:string" minOccurs="0" />
+<xs:element name="recebiDe" type="xs:string" minOccurs="0" />
+<xs:element name="situacaoCheque" type="xs:int" />
+<xs:element name="statusCheque" type="xs:int" />
+<xs:element name="telefoneTitular" type="xs:string" minOccurs="0" />
+<xs:element name="titular" type="xs:string" minOccurs="0" />
+<xs:element name="valor" type="xs:float" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="backupControlCheque">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="backupControlChequeResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="gerarCodigoCliente">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="gerarCodigoClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarCliente">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cliente" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="bairro_Endereco" type="xs:string" minOccurs="0" />
+<xs:element name="cidade_Endereco" type="xs:string" minOccurs="0" />
+<xs:element name="codigo" type="xs:string" minOccurs="0" />
+<xs:element name="complemento_Endereco" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="nome" type="xs:string" minOccurs="0" />
+<xs:element name="numero_Endereco" type="xs:string" minOccurs="0" />
+<xs:element name="rua_Endereco" type="xs:string" minOccurs="0" />
+<xs:element name="telefone" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListCheques">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cheque" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListChequesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recValorChequePorIntervaloData">
+<xs:sequence>
+<xs:element name="arg0" type="xs:dateTime" minOccurs="0" />
+<xs:element name="arg1" type="xs:dateTime" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recValorChequePorIntervaloDataResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:valorCheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="valorCheque">
+<xs:sequence>
+<xs:element name="quantidade" type="xs:int" />
+<xs:element name="valor" type="xs:float" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarCheque">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarChequeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recTodosCheques">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="recTodosChequesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cheque" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarCliente">
+<xs:sequence>
+<xs:element name="pCliente" type="tns:cliente" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUsuario">
+<xs:sequence>
+<xs:element name="pUsuario" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="login" type="xs:string" minOccurs="0" />
+<xs:element name="nivelAcesso" type="xs:string" minOccurs="0" />
+<xs:element name="senha" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recTodosClientes">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="recTodosClientesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarUsuario">
+<xs:sequence>
+<xs:element name="pUsuario" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarChequeLixeira">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarChequeLixeiraResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListClientes">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cliente" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListClientesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarBanco">
+<xs:sequence>
+<xs:element name="arg0" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletarBancoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recTodosBancos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="recTodosBancosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:banco" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recChequePorId">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recChequePorIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarCheque">
+<xs:sequence>
+<xs:element name="pCheque" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarChequeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cheque" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListBancos">
+<xs:sequence>
+<xs:element name="arg0" type="tns:banco" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salvarListBancosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="gerarCodigoCheque">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="gerarCodigoChequeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

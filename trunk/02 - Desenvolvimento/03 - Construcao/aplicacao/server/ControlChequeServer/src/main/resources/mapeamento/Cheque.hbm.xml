@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="br.com.controlcheque.server.model.Cheque" table="tb_cheque">
+    <id column="idCheque" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property column="contaBanco" name="conta"/>
+    <property column="agenciaBanco" name="agencia"/>
+    <property column="numeroCheque" name="numero"/>
+    <property column="titularCheque" name="titular"/>
+    <property column="cpfTitular" name="cpfTitular"/>
+    <property column="telefoneTitular" name="telefoneTitular"/>
+    <property column="dataBomPara" name="dataBomPara"/>
+    <property column="dataEmissao" name="dataEmissao"/>
+    <property column="obsCheque" name="observacao"/>
+    <property column="valorCheque" name="valor"/>
+    <property column="recebiDe" name="recebiDe"/>
+    <property column="passeiPara" name="passeiPara"/>
+    <property column="statusCheque" name="statusCheque"/>
+    <property column="situacaoCheque" name="situacaoCheque"/>
+    <property column="codigoCheque" name="codigoCheque"/>
+    <many-to-one column="idbanco" name="banco" not-null="true" unique="true"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlChequeClientes?wsdl" uri="wsdl/localhost_8080/ControlChequeServico/WsControlChequeClientes.wsdl"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlChequeClientes?xsd=1" uri="wsdl/localhost_8080/ControlChequeServico/WsControlChequeClientes.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque?wsdl" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque.wsdl"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque?xsd=1" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque_Banco?wsdl" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque_Banco.wsdl"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque_Banco?xsd=1" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque_Banco.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque_Cliente?wsdl" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque_Cliente.wsdl"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque_Cliente?xsd=1" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque_Cliente.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque_Cheque?wsdl" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque_Cheque.wsdl"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlCheque_Cheque?xsd=1" uri="wsdl/localhost_8080/ControlChequeServico/WsControlCheque_Cheque.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlChequeService?wsdl" uri="wsdl/localhost_8080/ControlChequeServico/WsControlChequeService.wsdl"/>
+    <system systemId="http://localhost:8080/ControlChequeServico/WsControlChequeService?xsd=1" uri="wsdl/localhost_8080/ControlChequeServico/WsControlChequeService.xsd_1.xsd"/>
+</catalog>
