@@ -1,0 +1,28 @@
+ARQUIVO PARA PADRONIZAR AS TELAS DO PROGRAMA COM-FACIL
+
+- Padrão de nome de imagens:
+	. As imagens deve ficar no diretório: SistemaControleChequesClient\other-sources\imagens\
+	. separar por pastas os tamanhos,resolução das imagens ex: \imagens\16x16
+	. padronizanar o nome das imagens da seguinte maneira: (img_contexto_resolucao). Ex: img_save_32x32.jpg
+
+- Padrão de nome para os componentes:
+	. Label = lbl_contexto . Ex: lbl_titulo
+	. Text = txt_contexto. Ex: txt_nome
+	. botão = btn_contexto. Ex: btn_salvar
+	. outros componentes seguir mesma idéia. 
+	
+- Padrão de nome para telas.
+	. Contexto + Form. Ex: CadastroBancoForm.java
+
+- Padrão botões:
+	. largura: 70
+	. altura: 20
+	. fonte: Arial, 12
+	. Cor: Cinza
+
+- Padrão fontes:
+	. Text: Arial,12
+	. Laber: Arial,12, Negrito e Maíscula.
+	
+- Padrão para telas de consulta:
+	. Todos os títulos das colunas devem estar em maísculo.
