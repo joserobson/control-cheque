@@ -1,0 +1,62 @@
+Correções Diego 05/12/2001
+
+ - Padranizar todos as telas segundo o arquivo Padroes_Control_Cheque.txt
+ 
+ - Implementar a navegação entre as telas para vizualizar melhor
+ 
+ - Padrão comum a todas as telas:
+	. Fazer os Atalhos de teclado das telas funcionar;
+	. Verificar funcionalidade de mudança de resolução de tela
+	. Resolução mínima para as telas é de 1024 x 768
+	. Não permitir maximizar nenhum tela, somente minimizar.
+	. Aumentar o tamanho das telas de consulta, tela com Grid.
+	
+	
+ - Telas
+	- AlterarSenhasForm
+		. Ajustar Tamanho da tela
+		. campo senha permitir no máximo 6 digitos.
+		. Ajustar tamanho dos botões seguindo padrão
+	
+	- CadastroBancosForm
+		. Ajustar componentes seguindo padrão		
+	
+	- CadastroChequesForm
+		. Tela ficou muito apertada distribuir mais os componentes como na imagem em anexo para Cadastro de Cheque;
+		. implementar máscaras para os campos Data, Valor,CPF/CNPJ. Olhar imagem para entender melhor.
+		. Situações possíveis: EM MAOS, DEVOLVILDO e REPASSADO.
+	
+	- CadastroClienteForm
+		. Ajustar componentes seguindo padrão.
+	
+	- ConsultaBancoForm
+		. Ajustar componentes seguindo padrão.
+		. Campo Pesquisar Por assumir seguintes valores: Código,Banco
+		. Grid contêm somente duas colunas: Código e Banco.
+    
+	- ConsultaClienteForm
+		. Ajustar componentes seguindo padrão.
+		. Campo Pesquisar Por assumir seguintes valores: Código,Nome
+		. Grid contêm colunas: Código,Nome, Telefone, cidade, numero
+	
+	- LixeiraForm
+		. Ajustar componentes seguindo padrão.		
+		. Grid contêm somente duas colunas: Código,Titular, BomPara, RecebiDe, PasseiPara, Valor, Banco, Situação, Conta, Agência, Numero, 
+			CPF, Titular,DataEmissão
+	
+	- LoginForm
+		. Ajustar Tamanho da tela
+		. campo senha permitir no máximo 6 digitos.
+		. Ajustar tamanho dos botões seguindo padrão
+	
+	- SomarChequeForm
+		. Ajustar Tamanho da tela
+		. Aplicar máscaras nos campos da tela.
+	
+	- TelaPrincipalForm
+		. Aplicar Menu com as imagens em Anexo.
+		. Melhorar Aparência dessa tela.
+		. Colocar os atalhos embaixo.
+		. Tela deve ocupar tela inteira de acordo com a resolução,se adaptar a resolução, lembrar de resolução mínima.		
+	
+	
